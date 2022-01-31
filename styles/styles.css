@@ -33,6 +33,14 @@ body {
   text-transform: uppercase;
 }
 
+.button-main {
+  background-color: #83B3D3;
+}
+
+.button-special {
+  background-color: #756257;
+}
+
 /* Главная страница */
 
 .navigation-link {
@@ -43,21 +51,19 @@ body {
   text-decoration: none;
 }
 
-.navigation-item {
-  text-align: left;
-}
-
-.page-header .button {
+.button-small {
   font-size: 16px;
   color: #ffffff;
-  background-color: #756257;
 }
 
 .main-index-header {
   width: 1200px;
-  height: 485px;
+  min-height: 485px;
   background-color: #8f0d0d;
   background-image: url("../images/index-background.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 1200px 485px;
 }
 
 /*  Причины */
@@ -73,8 +79,7 @@ body {
   line-height: 36px;
 }
 
-.reasons-item:first-of-type,
-.reasons-item:nth-of-type(2) {
+.reasons-item-container {
   color: #ffffff;
   background-color: #83B3D3;
 }
@@ -84,18 +89,25 @@ body {
   background-color: #ffffff;
 }
 
-.advantages-item:first-of-type,
-.advantages-item:nth-of-type(3),
-.reasons-item:nth-of-type(3),
-.reasons-item:nth-of-type(5) {
+.advantages-item:nth-of-type(2n+1) {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.reasons-item:nth-of-type(4) {
+.reasons-item:nth-of-type(2n+1):not(.reasons-item-container) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.reasons-item:nth-of-type(2n):not(.reasons-item-container) {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.reasons-item-title,
+.reasons-item-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
 .advantages-title {
   font-weight: 700;
   font-size: 24px;
@@ -103,7 +115,10 @@ body {
   text-transform: uppercase;
 }
 
-.reasons-item-text:not(:first-of-type):not(:nth-of-type(2)),
+.reasons-item-text:not(:first-of-type):not(:nth-of-type(2)) {
+  color: #333333;
+}
+
 .advantages-text {
   color: #333333;
 }
@@ -125,19 +140,20 @@ body {
 .offer-button {
   font-size: 20px;
   line-height: 36px;
-  background-color: #756257;
 }
 
 /* Подписка */
 .subscribe {
   width: 1200px;
-  height: 411px;
+  min-height: 411px;
 }
 
 .index-subscribe {
   color: #ffffff;
-  background-color: #83B3D3;
   background-image: url("../images/footer-background.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 1200px 411px;
 }
 
 .subscribe-title {
@@ -155,7 +171,6 @@ body {
 .subscribe-button {
   font-size: 20px;
   line-height: 26px;
-  background-color: #83B3D3;
 }
 
 /* Социальные сети */
@@ -178,7 +193,9 @@ body {
   color: #ffffff;
   background-color: #83B3D3;
   background-image: url("../images/catalog-background.jpg");
+  background-position: 0 0;
   background-repeat: no-repeat;
+  background-size: 1200px 408px;
 }
 
 .catalog-header-title {
@@ -212,7 +229,6 @@ body {
 .submit-button {
   font-size: 16px;
   line-height: 21px;
-  background-color: #83B3D3;
 }
 
 .reset-button {
@@ -243,22 +259,14 @@ body {
   text-decoration: none;
 }
 
-.catalog-card-link:first-of-type {
+.card-link-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 31px;
   color: #000000;
 }
 
-.catalog-card-link:nth-of-type(2) {
-  background-color: #756257;
-}
-
-.catalog-card-link:nth-of-type(3) {
-  background-color: #83B3D3;
-}
-
-.catalog-card-item:nth-child(3) .catalog-card-link:nth-of-type(3) {
+.button-card {
   background-color: #7DB54F;
 }
 
@@ -267,18 +275,21 @@ body {
   color: #333333;
 }
 
-.catalog-card-text:nth-of-type(3) {
+.card-text-special {
   font-size: 16px;
   line-height: 21px;
   text-transform: uppercase;
 }
 
+.catalog-button {
+  font-size: 20px;
+  line-height: 26px;
+}
+
 /* Пагинация */
-.catalog-button,
 .catalog-pagination-link {
   font-size: 20px;
   line-height: 26px;
-  background-color: #83B3D3;
 }
 
 .catalog-pagination-item:first-child .catalog-pagination-link {
