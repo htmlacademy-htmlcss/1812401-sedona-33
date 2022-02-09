@@ -37,6 +37,17 @@ body {
   margin: 0 auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .button {
   font-family: inherit;
   font-weight: 700;
@@ -64,26 +75,31 @@ body {
 }
 
 .navigation-logo {
+  position: absolute;
   width: 139px;
-  margin-right: 30px;
 }
 
 .navigation-list {
+  display: flex;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
+  flex-wrap: wrap;
 }
 
 .navigation-list:first-of-type {
   width: 400px;
   margin-right: auto;
+  margin-left: 169px;
 }
 
 .navigation-user {
   max-width: 300px;
+  align-items: center;
 }
 
 .navigation-link {
+  display: block;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -91,9 +107,29 @@ body {
   text-decoration: none;
 }
 
+.navigation-list:first-of-type .navigation-link {
+  padding: 20px 17px;
+}
+
+.navigation-user .navigation-item:not(:last-child) {
+  min-width: 40px;
+  min-height: 40px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.navigation-link:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .button-small {
+  min-width: 160px;
+  min-height: 37px;
   font-size: 16px;
   color: #ffffff;
+  vertical-align: middle;
 }
 
 /* Основное содержимое */
@@ -111,13 +147,17 @@ body {
   flex-grow: 1;
 }
 
+.main-index-logo {
+  margin-top: 51px;
+}
+
 /*  Причины */
 .reasons-list {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .reasons-text-container {
@@ -125,7 +165,14 @@ body {
   min-height: 384px;
 }
 
+.reasons-item-picture {
+  display: block;
+}
+
 .reasons-title {
+  margin: 0;
+  margin-top: 63px;
+  margin-bottom: 31px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -133,6 +180,8 @@ body {
 }
 
 .reasons-text {
+  margin: 0;
+  margin-bottom: 80px;
   font-size: 22px;
   line-height: 36px;
 }
@@ -150,7 +199,7 @@ body {
   width: 1200px;
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
   color: #000000;
   background-color: #ffffff;
 }
@@ -178,6 +227,9 @@ body {
 }
 
 .reasons-item-title {
+  margin: 0;
+  margin-top: 97px;
+  margin-bottom: 81px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -185,6 +237,9 @@ body {
 }
 
 .advantages-title {
+  margin: 0;
+  margin-top: 184px;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -201,6 +256,9 @@ body {
 
 /* Поиск отеля */
 .offer-title {
+  margin: 0;
+  margin-top: 91px;
+  margin-bottom: 29px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -208,22 +266,20 @@ body {
 }
 
 .offer-text {
+  margin: 0;
+  margin-bottom: 56px;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
 }
 
 .offer-button {
+  margin-bottom: 93px;
   font-size: 20px;
   line-height: 36px;
 }
 
 /* Подписка */
-.subscribe {
-  width: 1200px;
-  min-height: 411px;
-}
-
 .index-subscribe {
   color: #ffffff;
   background-image: url("../images/footer-background.jpg");
@@ -233,6 +289,9 @@ body {
 }
 
 .subscribe-title {
+  margin: 0;
+  padding-top: 94px;
+  margin-bottom: 29px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -240,8 +299,14 @@ body {
 }
 
 .subscribe-text {
+  margin: 0;
+  margin-bottom: 46px;
   font-size: 22px;
   line-height: 26px;
+}
+
+.subscribe-form {
+  padding-bottom: 94px;
 }
 
 .subscribe-button {
@@ -252,15 +317,26 @@ body {
 /* Социальные сети */
 .social {
   display: flex;
+  padding: 40px 0;
   width: 1056px;
   margin: 0 auto;
 }
 
 .social-list {
+  display: flex;
+  flex-wrap: wrap;
   width: 107px;
   margin: 0;
   padding: 0;
   margin-right: 61px;
+  list-style-type: none;
+}
+
+.social-item {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 .page-footer-address {
@@ -269,13 +345,18 @@ body {
 }
 
 .page-footer-address a {
-  width: 115px;
   font-style: normal;
   font-size: 40px;
   line-height: 40px;
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.htmlacademy-link {
+  display: block;
+  width: 115px;
+  height: 34px;
 }
 
 /* Каталог */
@@ -299,14 +380,30 @@ body {
 }
 
 .catalog-header-title {
+  margin: 0;
+  padding-top: 35px;
+  margin-bottom: 5px;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
 }
 
 .breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  margin-bottom: 45px;
+  list-style-type: none;
+}
+
+.breadcrumbs-item:first-child {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.breadcrumbs-item:not(:last-child) {
+  margin-right: 18px;
 }
 
 .breadcrumbs-link {
@@ -320,6 +417,12 @@ body {
   display: flex;
   width: 1056px;
   margin: 0 auto;
+  padding-bottom: 85px;
+}
+
+.filters-group {
+  display: flex;
+  flex-direction: column;
 }
 
 .filters-group-legend {
@@ -361,7 +464,17 @@ body {
   margin: 0 auto;
 }
 
+.catalog-result {
+  display: flex;
+  margin-top: 44px;
+  margin-bottom: 53px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .catalog-result-text {
+  margin: 0;
+  margin-right: auto;
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
@@ -369,6 +482,9 @@ body {
 }
 
 .catalog-result-select {
+  width: 287px;
+  height: 48px;
+  margin-right: 81px;
   font-family: inherit;
   font-size: 18px;
   line-height: 23px;
@@ -376,14 +492,29 @@ body {
 }
 
 .catalog-displaytype {
+  display: flex;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.catalog-displaytype-item {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+}
+
+.catalog-displaytype-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 /* Карточки гостиниц */
 .catalog-card-list {
   margin: 0;
+  margin-bottom: 64px;
   padding: 0;
+  list-style-type: none;
 }
 
 .catalog-card-link {
@@ -413,6 +544,7 @@ body {
 }
 
 .catalog-button {
+  margin-bottom: 60px;
   width: 620px;
   font-size: 20px;
   line-height: 26px;
@@ -420,12 +552,26 @@ body {
 }
 
 /* Пагинация */
+.catalog-bottom {
+  display: flex;
+  margin-bottom: 73px;
+  justify-content: space-between;
+}
+
 .catalog-pagination {
+  display: flex;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .catalog-pagination-link {
+  display: flex;
+  width: 55px;
+  height: 55px;
+  margin-right: 8px;
+  justify-content: center;
+  align-items: center;
   font-size: 20px;
   line-height: 26px;
 }
@@ -436,6 +582,8 @@ body {
 }
 
 .catalog-pagination-select {
+  width: 160px;
+  height: 48px;
   font-family: inherit;
   font-size: 18px;
   line-height: 23px;
