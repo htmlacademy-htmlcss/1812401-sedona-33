@@ -184,6 +184,10 @@ body {
 }
 
 /*  Причины */
+.reasons {
+  padding-top: 63px;
+}
+
 .reasons-list {
   display: flex;
   flex-wrap: wrap;
@@ -194,17 +198,21 @@ body {
 }
 
 .reasons-text-container {
+  box-sizing: border-box;
   width: 400px;
-  min-height: 384px;
+  padding: 97px 90px 40px 90px;
 }
 
 .reasons-item-picture {
   display: block;
 }
 
+.reasons-title-container {
+  padding: 0 70px;
+}
+
 .reasons-title {
   margin: 0;
-  padding-top: 63px;
   margin-bottom: 31px;
   font-weight: 700;
   font-size: 30px;
@@ -237,8 +245,10 @@ body {
 }
 
 .advantages-item {
+  box-sizing: border-box;
   width: 400px;
   min-height: 384px;
+  padding: 184px 75px 40px 75px;
 }
 
 .advantages-item:nth-of-type(2n+1) {
@@ -254,13 +264,14 @@ body {
 }
 
 .reasons-item:not(.reasons-item-container) {
+  box-sizing: border-box;
   width: 400px;
   min-height: 384px;
+  padding: 97px 90px 40px 90px;
 }
 
 .reasons-item-title {
   margin: 0;
-  padding-top: 97px;
   margin-bottom: 81px;
   font-weight: 700;
   font-size: 24px;
@@ -270,7 +281,6 @@ body {
 
 .advantages-title {
   margin: 0;
-  padding-top: 184px;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 24px;
@@ -287,9 +297,12 @@ body {
 }
 
 /* Поиск отеля */
+.offer {
+  padding: 91px 240px 93px 240px;
+}
+
 .offer-title {
   margin: 0;
-  padding-top: 91px;
   margin-bottom: 29px;
   font-weight: 700;
   font-size: 30px;
@@ -306,14 +319,18 @@ body {
 }
 
 .offer-button {
-  margin-bottom: 93px;
   min-width: 575px;
   line-height: 36px;
 }
 
 /* Подписка */
+.subscribe {
+  padding: 94px 200px 94px 200px;
+}
+
 .index-subscribe {
   color: #ffffff;
+  background-color: #756257;
   background-image: url("../images/footer-background.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -322,7 +339,6 @@ body {
 
 .subscribe-title {
   margin: 0;
-  padding-top: 94px;
   margin-bottom: 29px;
   font-weight: 700;
   font-size: 30px;
@@ -337,21 +353,15 @@ body {
   line-height: 26px;
 }
 
-.subscribe-form {
-  padding-bottom: 94px;
-}
-
 .subscribe-button {
   min-width: 200px;
   line-height: 26px;
 }
 
 /* Социальные сети */
-.social {
+.page-footer-bottom {
   display: flex;
-  padding: 40px 0;
-  width: 1056px;
-  margin: 0 auto;
+  padding: 40px 72px 40px 107px;
 }
 
 .social-list {
@@ -399,21 +409,17 @@ body {
 
 /* Хедер каталога */
 .catalog-top-container {
+  padding: 35px 72px 82px 71px;
   color: #ffffff;
-  background-color: #83B3D3;
+  background-color: #756257;
   background-image: url("../images/catalog-background.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 1200px 408px;
 }
 
-.catalog-header {
-  padding-left: 72px;
-}
-
 .catalog-header-title {
   margin: 0;
-  padding-top: 35px;
   margin-bottom: 5px;
   font-weight: 700;
   font-size: 60px;
@@ -449,7 +455,6 @@ body {
   display: flex;
   width: 1056px;
   margin: 0 auto;
-  margin-bottom: 82px;
   justify-content: space-between; /* Сделать. Временно. */
 }
 
@@ -521,8 +526,7 @@ body {
 
 .catalog-result {
   display: flex;
-  margin-top: 44px;
-  margin-bottom: 53px;
+  padding: 44px 0 53px 0;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -609,7 +613,6 @@ body {
 /* Пагинация */
 .catalog-bottom {
   display: flex;
-  margin-bottom: 73px;
   justify-content: space-between;
 }
 
