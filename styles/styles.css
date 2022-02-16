@@ -55,7 +55,7 @@ body {
 .button {
   padding: 0;
   border-style: none;
-  border-radius: 5px;
+  border-radius: 4px;
   font-family: inherit;
   font-weight: 700;
   color: #ffffff;
@@ -78,6 +78,9 @@ body {
 }
 
 .button-small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 37px;
   font-size: 16px;
 }
@@ -128,7 +131,7 @@ body {
   align-items: center;
 }
 
-.navigation-link {
+.navigation-link:not(.button-navigation) {
   display: block;
   font-weight: 700;
   font-size: 20px;
@@ -149,11 +152,7 @@ body {
 }
 
 .button-navigation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-width: 160px;
-  font-size: 16px;
   color: #ffffff;
 }
 
@@ -409,13 +408,15 @@ body {
 
 /* Хедер каталога */
 .catalog-top-container {
-  padding: 35px 72px 82px 71px;
+  min-height: 373px;
+  padding: 35px 72px 0 71px;
   color: #ffffff;
   background-color: #756257;
   background-image: url("../images/catalog-background.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 1200px 408px;
+  object-fit: fill;
 }
 
 .catalog-header-title {
@@ -453,8 +454,6 @@ body {
 /* Форма выбора гостиницы */
 .filters {
   display: flex;
-  width: 1056px;
-  margin: 0 auto;
   justify-content: space-between; /* Сделать. Временно. */
 }
 
@@ -469,7 +468,7 @@ body {
 .filters-group-legend {
   margin: 0;
   padding: 0;
-  padding-bottom: 30px;
+  padding-bottom: 34px;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
@@ -480,7 +479,7 @@ body {
 }
 
 .checkbox-input {
-  margin: 0;
+  margin: 0 19px 16px 0;
 }
 
 .radio-button {
@@ -488,11 +487,15 @@ body {
 }
 
 .radio-button-input {
-  margin: 0;
+  margin: 0 19px 16px 0;
 }
 
 .price-field {
   line-height: 23px;
+}
+
+.filters-buttons {
+  padding-top: 60px;
 }
 
 .filters-buttons button {
@@ -519,9 +522,8 @@ body {
 /* Список гостиниц */
 .catalog {
   display: flex;
-  width: 1056px;
+  padding: 0 72px 0 72px;
   flex-direction: column;
-  margin: 0 auto;
 }
 
 .catalog-result {
@@ -562,6 +564,8 @@ body {
   width: 48px;
   height: 48px;
   margin-bottom: 8px;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
 }
 
 .catalog-displaytype-item:not(:last-child) {
@@ -570,15 +574,38 @@ body {
 
 /* Карточки гостиниц */
 .catalog-card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 10px 18px;
   margin: 0;
   margin-bottom: 64px;
   padding: 0;
   list-style-type: none;
 }
 
+.catalog-card-item {
+  display: grid;
+  grid-template-columns: repeat(2, 136px);
+  grid-template-rows: 206px auto repeat(3, min-content);
+  gap: 16px 26px;
+  padding: 20px;
+}
+
+.catalog-card-link:not(.button) {
+  grid-column: 1 / -1;
+}
+
 .catalog-card-link {
-  padding: 9px 23px;
   text-decoration: none;
+}
+
+.catalog-card-image {
+  object-fit: contain;
+}
+
+.catalog-card-title {
+  grid-column: 1 / -1;
+  margin: 0;
 }
 
 .card-link-title {
@@ -593,12 +620,22 @@ body {
 }
 
 .catalog-card-text {
+  margin: 0;
   line-height: 23px;
   color: #333333;
 }
 
+.catalog-card-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-self: end;
+}
+
 .card-text-special {
-  font-size: 16px;
+  min-width: 160px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
   line-height: 21px;
   text-transform: uppercase;
 }
