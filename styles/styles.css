@@ -408,15 +408,15 @@ body {
 
 /* Хедер каталога */
 .catalog-top-container {
-  min-height: 373px;
-  padding: 35px 72px 0 71px;
+  min-height: 408px;
+  padding: 35px 72px 45px 71px;
+  box-sizing: border-box;
   color: #ffffff;
   background-color: #756257;
   background-image: url("../images/catalog-background.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
-  background-size: 1200px 408px;
-  object-fit: fill;
+  background-size: 100% 100%;
 }
 
 .catalog-header-title {
@@ -522,13 +522,13 @@ body {
 /* Список гостиниц */
 .catalog {
   display: flex;
-  padding: 0 72px 0 72px;
+  padding: 44px 72px 0 72px;
   flex-direction: column;
 }
 
 .catalog-result {
   display: flex;
-  padding: 44px 0 53px 0;
+  margin-bottom: 53px;
   flex-wrap: wrap;
   align-items: center;
 }
