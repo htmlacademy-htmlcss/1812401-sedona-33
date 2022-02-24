@@ -35,7 +35,7 @@
               </svg>
             </a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-item navigation-item-favorite">
             <a class="navigation-link navigation-link-favorite" href="#">
               <span class="visually-hidden">Избранное</span>
               <svg class="navigation-icon" aria-hidden="true" focusable="false" width="19" height="17" viewBox="0 0 19 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -59,6 +59,9 @@
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="index.html">
                 <span class="visually-hidden">На главную</span>
+                <svg class="breadcrumbs-icon" aria-hidden="true" focusable="false"width="12" height="12" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 .3 0 5.8V12h12V5.8L6 .3ZM11 11H1V6.2l5-4.5 5 4.5V11Z"/><path d="M4 10h1V7.5h2V10h1V6.5H4V10Z"/>
+                </svg>
               </a>
             </li>
             <li class="breadcrumbs-item">
@@ -137,7 +140,7 @@
 
           <ul class="catalog-displaytype">
             <li class="catalog-displaytype-item">
-              <a class="catalog-displaytype-link" href="#" aria-current="page">
+              <a class="catalog-displaytype-link catalog-displaytype-current" href="#" aria-current="page">
                 <span class="visually-hidden">Таблица</span>
               </a>
             </li>
@@ -156,7 +159,7 @@
 
         <ol class="catalog-card-list">
           <li class="catalog-card-item">
-            <a class="catalog-card-link" href="#">
+            <a class="catalog-card-link catalog-card-linkimage" href="#">
               <img class="catalog-card-image" src="images/catalog/amara-resort.jpg" width="299" height="206" alt="">
             </a>
             <h3 class="catalog-card-title">
@@ -170,14 +173,17 @@
             <a class="catalog-card-link button button-main button-small" href="#">В избранное</a>
             <div class="catalog-card-container">
               <div class="catalog-card-stars">
-                <span class="catalog-card-starimage"></span>
                 <span class="visually-hidden">Четыре звезды</span>
+                <span class="catalog-card-starimage"></span>
+                <span class="catalog-card-starimage"></span>
+                <span class="catalog-card-starimage"></span>
+                <span class="catalog-card-starimage"></span>
               </div>
               <p class="catalog-card-text card-text-special button-small">Рейтинг: 8,5</p>
             </div>
           </li>
           <li class="catalog-card-item">
-            <a class="catalog-card-link" href="#">
+            <a class="catalog-card-link catalog-card-linkimage" href="#">
               <img class="catalog-card-image" src="images/catalog/desert-quail.jpg" width="299" height="206" alt="">
             </a>
             <h3 class="catalog-card-title">
@@ -191,14 +197,16 @@
             <a class="catalog-card-link button button-main button-small" href="#">В избранное</a>
             <div class="catalog-card-container">
               <div class="catalog-card-stars">
-                <span class="catalog-card-starimage"></span>
                 <span class="visually-hidden">Три звезды</span>
+                <span class="catalog-card-starimage"></span>
+                <span class="catalog-card-starimage"></span>
+                <span class="catalog-card-starimage"></span>
               </div>
               <p class="catalog-card-text card-text-special button-small">Рейтинг: 8,9</p>
             </div>
           </li>
           <li class="catalog-card-item">
-            <a class="catalog-card-link" href="#">
+            <a class="catalog-card-link catalog-card-linkimage" href="#">
               <img class="catalog-card-image" src="images/catalog/villas-poco.jpg" width="299" height="206" alt="">
             </a>
             <h3 class="catalog-card-title">
@@ -212,14 +220,15 @@
             <a class="catalog-card-link button button-card button-small" href="#">В избранном</a>
             <div class="catalog-card-container">
               <div class="catalog-card-stars">
-                <span class="catalog-card-starimage"></span>
                 <span class="visually-hidden">Две звезды</span>
+                <span class="catalog-card-starimage"></span>
+                <span class="catalog-card-starimage"></span>
               </div>
             <p class="catalog-card-text card-text-special button-small">Рейтинг: 9,2</p>
             </div>
           </li>
           <li class="catalog-card-item">
-            <a class="catalog-card-link" href="#">
+            <a class="catalog-card-link catalog-card-linkimage" href="#">
               <img class="catalog-card-image" src="images/catalog/greentree.jpg" width="299" height="206" alt="">
             </a>
             <h3 class="catalog-card-title">
@@ -233,8 +242,9 @@
             <a class="catalog-card-link button button-main button-small" href="#">В избранное</a>
             <div class="catalog-card-container">
               <div class="catalog-card-stars">
-                <span class="catalog-card-starimage"></span>
                 <span class="visually-hidden">Две звезды</span>
+                <span class="catalog-card-starimage"></span>
+                <span class="catalog-card-starimage"></span>
               </div>
             <p class="catalog-card-text card-text-special button-small">Рейтинг: 9,2</p>
             </div>
@@ -246,7 +256,7 @@
         <div class="catalog-bottom">
           <ol class="catalog-pagination">
             <li class="catalog-pagination-item">
-              <a class="catalog-pagination-link button" href="catalog.html" aria-current="page">1</a>
+              <a class="catalog-pagination-link button catalog-pagination-current" href="catalog.html" aria-current="page">1</a>
             </li>
             <li class="catalog-pagination-item">
               <a class="catalog-pagination-link button button-main" href="#">2</a>
@@ -325,6 +335,9 @@
 
         <a class="htmlacademy-link" href="https://htmlacademy.ru/">
           <span class="visually-hidden">HTML Академия</span>
+          <svg class="social-icon htmlacademy-image" aria-hidden="true" focusable="false" width="115" height="33" viewBox="0 0 115 33" fill="#000000" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 6.2c.8-1 2-1.7 3.6-1.7 2.7 0 4.6 1.9 4.5 4.9v6.1h-2V9.8c0-1.8-1.1-3.2-2.9-3.2-2 0-3.3 1.5-3.3 3.6v5.3h-2V0h2v6.2H8Zm-8 9.3v-2.6h2.5v2.6H0ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2Zm11 1.9c.6-1.3 1.9-2.1 3.5-2.1 2.5 0 4 1.8 3.9 4.3v6.5h-2V9.1c0-1.6-.9-2.6-2.4-2.6-1.2 0-2.6.9-2.6 3.3v5.6h-2V9.1c0-1.6-.9-2.6-2.4-2.6C32 6.5 31 8 31 10v5.4h-2V4.8h1.9v1.6h.1c.6-1 1.7-1.8 3.1-1.8 1.6 0 2.8.9 3.4 2.1h.1Zm10.2 6c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM25 17.9c1.7 0 3 .7 3.9 1.8v-1.5h2v10.6h-2v-1.6h-.1c-.8 1.1-2 1.9-3.8 1.9-3.1 0-5.4-2.3-5.4-5.6s2.3-5.6 5.4-5.6Zm-3.3 5.6c0 2 1.4 3.6 3.6 3.6s3.6-1.7 3.6-3.6c0-2-1.4-3.6-3.6-3.6s-3.6 1.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1V22Zm7-4.1c1.7 0 3 .7 3.9 1.8v-1.5h2v10.6h-2v-1.6H55c-.8 1.1-2 1.9-3.8 1.9-3.1 0-5.4-2.3-5.4-5.6s2.3-5.6 5.4-5.6Zm-3.3 5.6c0 2 1.4 3.6 3.6 3.6 2.1 0 3.6-1.7 3.6-3.6 0-2-1.4-3.6-3.6-3.6s-3.6 1.6-3.6 3.6Zm20.8-3.7c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6Zm7.7-3.6c0-3.1 2.2-5.6 5.5-5.6 3.5 0 5.7 2.7 5.5 6.3H75c.1 1.6 1.5 2.9 3.4 2.9 1.4 0 2.5-.6 3-1.6h2.1c-.7 2.3-2.7 3.6-5.2 3.6-3.4 0-5.5-2.6-5.5-5.6Zm8.8-1.1c-.3-1.6-1.6-2.6-3.3-2.6-1.7 0-2.9 1.1-3.2 2.6h6.5Zm16.6-4.5c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4Zm7.6.2 3.6 8.9 3.4-8.9h2.1l-4.7 12.2c-.7 1.8-1.7 2.6-3.5 2.6h-2.5v-2h2.5c1 0 1.4-.3 1.7-1.2l-4.8-11.6h2.2Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h114.9v32.9H0z"/></clipPath></defs>
+          </svg>
         </a>
       </div>
     </footer>
