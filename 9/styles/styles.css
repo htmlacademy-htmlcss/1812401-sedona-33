@@ -22,23 +22,19 @@ html {
   background-color: #E5E5E5;
 }
 
-body {
-  margin: 0;
-  min-height: 100%;
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
-  text-align: center;
-  color: #000000;
-  background-color: #ffffff;
-}
-
 .page-container {
   width: 1200px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  min-height: 100%;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  text-align: center;
+  color: #333333;
+  background-color: #ffffff;
 }
 
 .visually-hidden {
@@ -53,20 +49,23 @@ body {
 }
 
 .button {
-  display: inline-flex;
+  display: inline-block;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding: 0;
-  border-style: none;
+  padding: 13px 10px 14px 10px;
+  border: none;
   font-family: inherit;
   font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
   color: #ffffff;
   border-radius: 4px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
+  outline: none;
 }
 
 .button:active {
@@ -84,7 +83,6 @@ body {
 .button-main:focus {
   background-color: #68A2CA;
   box-shadow: 0 0 0 3px #756257;
-  outline: none;
 }
 
 .button-main:focus:not(:focus-visible) {
@@ -112,7 +110,6 @@ body {
 .button-special:focus {
   background-color: #615048;
   box-shadow: 0 0 0 3px #83B3D3;
-  outline: none;
 }
 
 .button-special:focus:not(:focus-visible) {
@@ -137,7 +134,6 @@ body {
 
 .button-small {
   padding: 8px 10px;
-  font-size: 16px;
 }
 
 /* Главная страница */
@@ -154,10 +150,10 @@ body {
 
 .navigation-logo {
   display: block;
-  z-index: 1;
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 1;
   width: 139px;
   height: 70px;
 }
@@ -228,7 +224,7 @@ body {
   margin-right: 22px;
 }
 
-.navigation-user .navigation-link:not(.button-navigation) {
+.navigation-user .navigation-link {
   position: relative;
   box-sizing: border-box;
   display: flex;
@@ -240,17 +236,16 @@ body {
   margin-right: 5px;
 }
 
-.navigation-link-favorite::before {
-  content: "12";
+.navigation-icon-quantity {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 20px;
   height: 20px;
-  z-index: 1;
   top: 0px;
   left: 22px;
+  z-index: 1;
   font-size: 10px;
   line-height: 13px;
   font-weight: 400;
@@ -259,21 +254,19 @@ body {
   background-color: #7DB54F;
 }
 
-.navigation-link-favorite:active::before {
+.navigation-link-favorite:active .navigation-icon-quantity {
   color: rgba(255, 255, 255, 0.3);
 }
 
 .button-navigation {
   padding: 9px 10px 8px 10px;
-  line-height: 20px;
   min-width: 160px;
+  line-height: 20px;
   color: #ffffff;
 }
 
 /* Основное содержимое */
 .main-page {
-  display: flex;
-  flex-direction: column;
   flex-grow: 1;
 }
 
@@ -286,9 +279,9 @@ body {
   padding-bottom: 82px;
   background-color: #a7a2a2;
   background-image: url("../images/index-background.jpg");
-  background-position: 0 0;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 1200px 100%;
+  background-size: cover;
 }
 
 .main-index-header::before {
@@ -345,6 +338,7 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -368,7 +362,7 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  color: #000000;
+  color: #333333;
   background-color: #ffffff;
 }
 
@@ -456,14 +450,15 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  color: #000000;
   text-transform: uppercase;
 }
 
-.reasons-item-text:not(:first-of-type):not(:nth-of-type(2)) {
-  color: #333333;
+.reasons-submain-item .reasons-item-title {
+  color: #000000;
 }
 
-.advantages-text {
+.reasons-submain-item .reasons-item-title::before {
   color: #333333;
 }
 
@@ -480,6 +475,7 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -488,7 +484,6 @@ body {
   margin-bottom: 56px;
   font-size: 22px;
   line-height: 26px;
-  color: #333333;
 }
 
 .offer-button {
@@ -844,14 +839,10 @@ body {
 .submit-button {
   min-width: 160px;
   margin-bottom: 20px;
-  padding: 13px 10px 14px 10px;
-  font-size: 16px;
-  line-height: 21px;
 }
 
 .submit-button:focus {
   box-shadow: 0 0 0 3px #FFFFFF;
-  outline: none;
 }
 
 .submit-button:focus:not(:focus-visible) {
@@ -866,7 +857,7 @@ body {
   width: min-content;
   align-self: center;
   padding: 0 10px;
-  background: none;
+  background: transparent;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -880,7 +871,6 @@ body {
 
 .reset-button:focus {
   box-shadow: 0 0 0 3px #83B3D3;
-  outline: none;
 }
 
 .reset-button:focus:not(:focus-visible) {
@@ -915,6 +905,7 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -978,7 +969,7 @@ body {
   background-size: 16px 14px;
 }
 
-.catalog-displaytype-item:first-child .catalog-displaytype-link {
+.catalog-displaytype-item .catalog-displaytype-link:first-child {
   background-image: url("../images/icons/display-type-1.svg");
 }
 
@@ -1095,7 +1086,6 @@ body {
 .button-card:focus {
   background-color: #6C9E42;
   box-shadow: 0 0 0 3px #756257;
-  outline: none;
 }
 
 .button-card:focus:not(:focus-visible) {
@@ -1115,7 +1105,6 @@ body {
 .catalog-card-text {
   margin: 0;
   line-height: 23px;
-  color: #333333;
 }
 
 .catalog-card-container {
@@ -1162,15 +1151,7 @@ body {
   content: "";
   position: absolute;
   top: -30px;
-  background-color: #E6E6E6;
-  width: 1056px;
-  height: 1px;
-}
-
-.catalog-button::after {
-  content: "";
-  position: absolute;
-  bottom: -30px;
+  left: -218px;
   background-color: #E6E6E6;
   width: 1056px;
   height: 1px;
@@ -1178,8 +1159,19 @@ body {
 
 /* Пагинация */
 .catalog-bottom {
+  position: relative;
   display: flex;
   justify-content: space-between;
+}
+
+.catalog-bottom::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 0;
+  background-color: #E6E6E6;
+  width: 1056px;
+  height: 1px;
 }
 
 .catalog-pagination {
@@ -1222,7 +1214,6 @@ body {
 
 .catalog-pagination-select:focus {
   border: 2px solid #83B3D3;
-  outline: none;
 }
 
 .catalog-pagination-select:focus:not(:focus-visible) {
