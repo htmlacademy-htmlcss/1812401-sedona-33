@@ -10,7 +10,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
   </head>
-  <body class="page-container">
+  <body class="page-body page-container">
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo" href="#">
@@ -56,19 +56,19 @@
     </header>
 
     <main class="main-page">
-      <header class="main-index-header">
+      <header class="welcome">
         <h1 class="visually-hidden">Седона</h1>
-        <img class="main-index-logo" src="images/index-logo.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona! Because the Grand Canyon sucks!">
+        <img class="welcome-image" src="images/index-logo.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona! Because the Grand Canyon sucks!">
       </header>
 
       <section class="reasons">
-        <div class="reasons-title-container">
-          <h2 class="reasons-title">Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
-          <p class="reasons-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+        <div class="section-topper-container">
+          <h2 class="section-topper-title">Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
+          <p class="section-topper-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
         </div>
         <ol class="reasons-list">
-          <li class="reasons-item reasons-item-container">
-            <div class="reasons-text-container">
+          <li class="reasons-item reasons-item-main">
+            <div class="reasons-item-text-container">
               <h3 class="reasons-item-title">Настоящий<br>городок</h3>
               <p class="reasons-item-text">Седона — не аттракцион<br>для туристов, там течёт<br>своя жизнь</p>
             </div>
@@ -76,38 +76,38 @@
               <img class="reasons-item-picture" src="images/saloon.jpg" width="800" height="384" alt="Салун.">
             </div>
             <ul class="advantages">
-              <li class="advantages-item">
+              <li class="advantages-item advantages-item-home">
                 <h4 class="advantages-title">Жильё</h4>
                 <p class="advantages-text">Рекомендуем пожить<br>в настоящем мотеле,<br>всё как в кино!</p>
               </li>
-              <li class="advantages-item">
+              <li class="advantages-item advantages-item-eating">
                 <h4 class="advantages-title">Еда</h4>
                 <p class="advantages-text">Всегда заказывайте<br>топовый фирменный бургер,<br>вы не разочаруетесь!</p>
               </li>
-              <li class="advantages-item">
+              <li class="advantages-item advantages-item-souvenirs">
                 <h4 class="advantages-title">Сувениры</h4>
                 <p class="advantages-text">Не только китайского,<br>но и настоящего местного<br>производства!</p>
               </li>
             </ul>
           </li>
-          <li class="reasons-item reasons-item-container">
+          <li class="reasons-item reasons-item-main">
             <div class="reasons-item-picture-container">
               <img class="reasons-item-picture" src="images/canyon.jpg" width="800" height="384" alt="Каньон.">
             </div>
-            <div class="reasons-text-container">
+            <div class="reasons-item-text-container">
               <h3 class="reasons-item-title">Там есть<br>мост дьявола</h3>
               <p class="reasons-item-text">Да, по нему можно пройти!<br>Если вы осмелитесь,<br>разумеется</p>
             </div>
           </li>
-          <li class="reasons-item reasons-submain-item">
+          <li class="reasons-item reasons-item-submain">
             <h3 class="reasons-item-title">Небольшая<br>площадь</h3>
             <p class="reasons-item-text">Все достопримечательности<br>находятся очень близко</p>
           </li>
-          <li class="reasons-item reasons-submain-item">
+          <li class="reasons-item reasons-item-submain">
             <h3 class="reasons-item-title">Красивая<br>дорога</h3>
             <p class="reasons-item-text">Ехать в Седону из Лас-Вегаса<br>совсем не скучно!</p>
           </li>
-          <li class="reasons-item reasons-submain-item">
+          <li class="reasons-item reasons-item-submain">
             <h3 class="reasons-item-title">Мало<br>туристов</h3>
             <p class="reasons-item-text">Большинство едет в Гранд<br>Каньон и толпится там</p>
           </li>
@@ -115,16 +115,20 @@
       </section>
 
       <section class="offer">
-        <h2 class="offer-title">Заинтересовались?</h2>
-        <p class="offer-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <div class="section-topper">
+          <h2 class="section-topper-title">Заинтересовались?</h2>
+          <p class="section-topper-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        </div>
         <button class="offer-button button button-special button-large">Поиск гостиницы в Седоне</button>
       </section>
     </main>
 
     <footer class="page-footer">
-      <section class="subscribe index-subscribe">
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-        <p class="subscribe-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
+      <section class="subscribe subscribe-with-bg">
+        <div class="section-topper">
+          <h2 class="section-topper-title">Подпишитесь на рассылку</h2>
+          <p class="section-topper-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
+        </div>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="subscribe-field">
             <span class="visually-hidden">E-mail</span>
@@ -227,7 +231,7 @@
               </label>
               <span class="modal-information-button">
                 <span class="visually-hidden">Дополнительная информация</span>
-                <div class="display-none form-information-container">
+                <div class="form-information-container display-none">
                   <p class="form-information-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
                 </div>
               </span>
