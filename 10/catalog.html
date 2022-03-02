@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <base href="https://htmlacademy-htmlcss.github.io/1812401-sedona-33/10/">
 </head>
-  <body class="page-container">
+  <body class="page-body page-container">
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
@@ -132,22 +132,16 @@
               <legend class="filters-group-legend">Стоимость, ₽:</legend>
               <div class="price-container">
                 <div class="price-input-container">
-                  <label class="price-field" for="price-min">
-                    <span class="visually-hidden">Минимальная цена</span>
-                  </label>
                   <input class="field-input price-input price-input-min" type="number" id="price-min" name="price-min" value="0">
-                  <span class="price-input-text">от</span>
+                  <label class="price-input-label" for="price-min">от</label>
                 </div>
                 <div class="price-input-container">
-                  <label class="price-field" for="price-max">
-                    <span class="visually-hidden">Максимальная цена</span>
-                  </label>
                   <input class="field-input price-input price-input-max" type="number" id="price-max" name="price-max" value="9000">
-                  <span class="price-input-text">до</span>
+                  <label class="price-input-label" for="price-max">до</label>
                 </div>
               </div>
               <div class="price-range-scale">
-                <div class="price-range-bar" style="left: 0; width: 227px">
+                <div class="price-range-bar" style="width: 227px;">
                   <button class="price-range-toggle toggle-min">
                     <span class="visually-hidden">Изменить минимальную цену</span>
                   </button>
@@ -323,9 +317,11 @@
     </main>
 
     <footer class="page-footer">
-      <section class="subscribe catalog-subscribe">
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-        <p class="subscribe-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
+      <section class="subscribe">
+        <div class="section-topper">
+          <h2 class="section-topper-title">Подпишитесь на рассылку</h2>
+          <p class="section-topper-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
+        </div>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="subscribe-field">
             <span class="visually-hidden">E-mail</span>
