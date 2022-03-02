@@ -132,6 +132,7 @@
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="subscribe-field">
             <span class="visually-hidden">E-mail</span>
+            <!-- При неверном e-mail добавляется класс .field-input-invalid -->
             <input class="field-input" name="subscribe-email" placeholder="Ваш e-mail" type="email" required>
           </label>
           <button class="subscribe-button button button-main button-large" type="submit">Подписаться</button>
@@ -197,15 +198,17 @@
             <label class="modal-form-label" for="in-date">
               Дата заезда:
             </label>
+            <!-- При неверном вводе даты добавляется псевдоэлемент .modal-form-notacceptable::before -->
+            <!-- При верном вводе даты добавляется псевдоэлемент .modal-form-acceptable::before -->
             <div class="modal-input-large modal-form-notacceptable">
-              <input class="field-input modal-form-input" type="text" id="in-date" name="in-date" placeholder="Укажите дату" value="27 апреля 2020">
+              <input class="field-input modal-form-input" type="date" id="in-date" name="in-date" placeholder="Укажите дату" value="27 апреля 2020">
             </div>
 
             <label class="modal-form-label" for="out-date">
               Дата выезда:
             </label>
             <div class="modal-input-large modal-form-acceptable">
-              <input class="field-input modal-form-input" type="text" id="out-date" name="out-date" placeholder="Укажите дату" value="1 сентября 2021">
+              <input class="field-input modal-form-input" type="date" id="out-date" name="out-date" placeholder="Укажите дату" value="1 сентября 2021">
             </div>
 
             <label class="modal-form-label" for="adults">
@@ -229,6 +232,8 @@
               <label class="modal-form-label form-label-kids" for="kids">
                 Дети:
               </label>
+              <!-- При нажатии на .modal-information-button добавляется класс .information-active,
+              с .form-information-container снимается .display-none -->
               <span class="modal-information-button">
                 <span class="visually-hidden">Дополнительная информация</span>
                 <div class="form-information-container display-none">
