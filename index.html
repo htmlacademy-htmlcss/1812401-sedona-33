@@ -10,7 +10,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
   </head>
-  <body class="page-container">
+  <body class="page-body page-container">
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo" href="#">
@@ -30,7 +30,7 @@
         </ul>
 
         <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
+          <li class="navigation-item navigation-item-ordinary">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Поиск</span>
               <svg class="navigation-icon" aria-hidden="true" focusable="false" width="20" height="19" viewBox="0 0 20 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -56,19 +56,19 @@
     </header>
 
     <main class="main-page">
-      <header class="main-index-header">
+      <header class="welcome">
         <h1 class="visually-hidden">Седона</h1>
-        <img class="main-index-logo" src="images/index-logo.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona! Because the Grand Canyon sucks!">
+        <img class="welcome-image" src="images/index-logo.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona! Because the Grand Canyon sucks!">
       </header>
 
       <section class="reasons">
-        <div class="reasons-title-container">
-          <h2 class="reasons-title">Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
-          <p class="reasons-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+        <div class="section-topper-container">
+          <h2 class="section-topper-title">Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
+          <p class="section-topper-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
         </div>
         <ol class="reasons-list">
-          <li class="reasons-item reasons-item-container">
-            <div class="reasons-text-container">
+          <li class="reasons-item reasons-item-main">
+            <div class="reasons-item-text-container">
               <h3 class="reasons-item-title">Настоящий<br>городок</h3>
               <p class="reasons-item-text">Седона — не аттракцион<br>для туристов, там течёт<br>своя жизнь</p>
             </div>
@@ -76,38 +76,38 @@
               <img class="reasons-item-picture" src="images/saloon.jpg" width="800" height="384" alt="Салун.">
             </div>
             <ul class="advantages">
-              <li class="advantages-item">
+              <li class="advantages-item advantages-item-home">
                 <h4 class="advantages-title">Жильё</h4>
                 <p class="advantages-text">Рекомендуем пожить<br>в настоящем мотеле,<br>всё как в кино!</p>
               </li>
-              <li class="advantages-item">
+              <li class="advantages-item advantages-item-eating">
                 <h4 class="advantages-title">Еда</h4>
                 <p class="advantages-text">Всегда заказывайте<br>топовый фирменный бургер,<br>вы не разочаруетесь!</p>
               </li>
-              <li class="advantages-item">
+              <li class="advantages-item advantages-item-souvenirs">
                 <h4 class="advantages-title">Сувениры</h4>
                 <p class="advantages-text">Не только китайского,<br>но и настоящего местного<br>производства!</p>
               </li>
             </ul>
           </li>
-          <li class="reasons-item reasons-item-container">
+          <li class="reasons-item reasons-item-main">
             <div class="reasons-item-picture-container">
               <img class="reasons-item-picture" src="images/canyon.jpg" width="800" height="384" alt="Каньон.">
             </div>
-            <div class="reasons-text-container">
+            <div class="reasons-item-text-container">
               <h3 class="reasons-item-title">Там есть<br>мост дьявола</h3>
               <p class="reasons-item-text">Да, по нему можно пройти!<br>Если вы осмелитесь,<br>разумеется</p>
             </div>
           </li>
-          <li class="reasons-item reasons-submain-item">
+          <li class="reasons-item reasons-item-submain">
             <h3 class="reasons-item-title">Небольшая<br>площадь</h3>
             <p class="reasons-item-text">Все достопримечательности<br>находятся очень близко</p>
           </li>
-          <li class="reasons-item reasons-submain-item">
+          <li class="reasons-item reasons-item-submain">
             <h3 class="reasons-item-title">Красивая<br>дорога</h3>
             <p class="reasons-item-text">Ехать в Седону из Лас-Вегаса<br>совсем не скучно!</p>
           </li>
-          <li class="reasons-item reasons-submain-item">
+          <li class="reasons-item reasons-item-submain">
             <h3 class="reasons-item-title">Мало<br>туристов</h3>
             <p class="reasons-item-text">Большинство едет в Гранд<br>Каньон и толпится там</p>
           </li>
@@ -115,19 +115,24 @@
       </section>
 
       <section class="offer">
-        <h2 class="offer-title">Заинтересовались?</h2>
-        <p class="offer-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <div class="section-topper">
+          <h2 class="section-topper-title">Заинтересовались?</h2>
+          <p class="section-topper-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        </div>
         <button class="offer-button button button-special button-large">Поиск гостиницы в Седоне</button>
       </section>
     </main>
 
     <footer class="page-footer">
-      <section class="subscribe index-subscribe">
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-        <p class="subscribe-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
+      <section class="subscribe subscribe-with-bg">
+        <div class="section-topper">
+          <h2 class="section-topper-title">Подпишитесь на рассылку</h2>
+          <p class="section-topper-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
+        </div>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="subscribe-field field">
+          <label class="subscribe-field">
             <span class="visually-hidden">E-mail</span>
+            <!-- При неверном e-mail добавляется класс .field-input-invalid -->
             <input class="field-input" name="subscribe-email" placeholder="Ваш e-mail" type="email" required>
           </label>
           <button class="subscribe-button button button-main button-large" type="submit">Подписаться</button>
@@ -177,5 +182,85 @@
         </a>
       </div>
     </footer>
+
+    <div class="modal-container display-none">
+      <div class="modal">
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <button class="modal-close-button field-input">
+            <span class="visually-hidden">Закрыть</span>
+            <svg class="close-button-image" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" fill-opacity="1" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z"/>
+            </svg>
+          </button>
+
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="modal-form-label" for="in-date">
+              Дата заезда:
+            </label>
+            <!-- При неверном вводе даты добавляется псевдоэлемент .modal-form-notacceptable::before -->
+            <!-- При верном вводе даты добавляется псевдоэлемент .modal-form-acceptable::before -->
+            <div class="modal-input-large modal-form-notacceptable">
+              <input class="field-input modal-form-input" type="date" id="in-date" name="in-date" placeholder="Укажите дату" value="27 апреля 2020">
+            </div>
+
+            <label class="modal-form-label" for="out-date">
+              Дата выезда:
+            </label>
+            <div class="modal-input-large modal-form-acceptable">
+              <input class="field-input modal-form-input" type="date" id="out-date" name="out-date" placeholder="Укажите дату" value="1 сентября 2021">
+            </div>
+
+            <label class="modal-form-label" for="adults">
+              Взрослые:
+            </label>
+            <div class="modal-input-small">
+              <button class="modal-number-button modal-minus-button" type="button">
+                <svg class="number-button-image" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="currentColor" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0v1h13V0H0Z"/>
+                </svg>
+              </button>
+              <input class="field-input modal-form-input modal-form-number" type="number" id="adults" name="adults" min="0" max="1000" value="2">
+              <button class="modal-number-button modal-plus-button" type="button">
+                <svg class="number-button-image" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="modal-label-container label-kids-container">
+              <label class="modal-form-label form-label-kids" for="kids">
+                Дети:
+              </label>
+              <!-- При нажатии на .modal-information-button добавляется класс .information-active,
+              с .form-information-container снимается .display-none -->
+              <span class="modal-information-button">
+                <span class="visually-hidden">Дополнительная информация</span>
+                <div class="form-information-container display-none">
+                  <p class="form-information-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+                </div>
+              </span>
+            </div>
+            <div class="modal-input-small">
+              <div class="modal-input-small">
+                <button class="modal-number-button modal-minus-button" type="button">
+                  <svg class="number-button-image" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" fill="currentColor" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0v1h13V0H0Z"/>
+                  </svg>
+                </button>
+                <input class="field-input modal-form-input modal-form-number" type="number" id="kids" name="kids" min="0" max="1000" value="1">
+                <button class="modal-number-button modal-plus-button" type="button">
+                  <svg class="number-button-image" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <button class="modal-button button button-main button-large" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
