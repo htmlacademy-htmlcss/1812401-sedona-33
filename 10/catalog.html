@@ -142,10 +142,10 @@
               </div>
               <div class="price-range-scale">
                 <div class="price-range-bar" style="width: 227px;">
-                  <button class="price-range-toggle toggle-min">
+                  <button class="price-range-toggle toggle-min" type="button">
                     <span class="visually-hidden">Изменить минимальную цену</span>
                   </button>
-                  <button class="price-range-toggle toggle-max">
+                  <button class="price-range-toggle toggle-max" type="button">
                     <span class="visually-hidden">Изменить максимальную цену</span>
                   </button>
                 </div>
@@ -161,13 +161,15 @@
       </div>
 
       <section class="catalog">
+        <h2 class="visually-hidden">Список гостиниц</h2>
         <div class="catalog-result">
-          <h2 class="visually-hidden">Список гостиниц</h2>
           <p class="catalog-result-text">Найдено гостиниц: 38</p>
 
-          <select class="catalog-result-select" aria-label="Сортировка">
-            <option value="cheap-first">Сначала дешёвые</option>
-          </select>
+          <div class="select-container select-container-hotel">
+            <select class="catalog-result-select" aria-label="Сортировка">
+              <option value="cheap-first">Сначала дешёвые</option>
+            </select>
+          </div>
 
           <ul class="catalog-displaytype">
             <li class="catalog-displaytype-item">
@@ -205,12 +207,9 @@
             <div class="catalog-card-container">
               <div class="catalog-card-stars">
                 <span class="visually-hidden">Четыре звезды</span>
-                <span class="catalog-card-starimage"></span>
-                <span class="catalog-card-starimage"></span>
-                <span class="catalog-card-starimage"></span>
-                <span class="catalog-card-starimage"></span>
+                <span class="stars-item four-stars"></span>
               </div>
-              <p class="catalog-card-text card-text-special button-small">Рейтинг: 8,5</p>
+              <p class="catalog-card-text card-text-special">Рейтинг: 8,5</p>
             </div>
           </li>
           <li class="catalog-card-item">
@@ -229,11 +228,9 @@
             <div class="catalog-card-container">
               <div class="catalog-card-stars">
                 <span class="visually-hidden">Три звезды</span>
-                <span class="catalog-card-starimage"></span>
-                <span class="catalog-card-starimage"></span>
-                <span class="catalog-card-starimage"></span>
+                <span class="stars-item three-stars"></span>
               </div>
-              <p class="catalog-card-text card-text-special button-small">Рейтинг: 8,9</p>
+              <p class="catalog-card-text card-text-special">Рейтинг: 8,9</p>
             </div>
           </li>
           <li class="catalog-card-item">
@@ -252,10 +249,9 @@
             <div class="catalog-card-container">
               <div class="catalog-card-stars">
                 <span class="visually-hidden">Две звезды</span>
-                <span class="catalog-card-starimage"></span>
-                <span class="catalog-card-starimage"></span>
+                <span class="stars-item two-stars"></span>
               </div>
-            <p class="catalog-card-text card-text-special button-small">Рейтинг: 9,2</p>
+            <p class="catalog-card-text card-text-special">Рейтинг: 9,2</p>
             </div>
           </li>
           <li class="catalog-card-item">
@@ -274,15 +270,16 @@
             <div class="catalog-card-container">
               <div class="catalog-card-stars">
                 <span class="visually-hidden">Две звезды</span>
-                <span class="catalog-card-starimage"></span>
-                <span class="catalog-card-starimage"></span>
+                <span class="stars-item two-stars"></span>
               </div>
-            <p class="catalog-card-text card-text-special button-small">Рейтинг: 9,2</p>
+            <p class="catalog-card-text card-text-special">Рейтинг: 9,2</p>
             </div>
           </li>
         </ol>
 
-        <button class="catalog-button button button-main button-large">Загрузить ещё</button>
+        <div class="catalog-button-container">
+          <button class="catalog-button button button-main button-large">Загрузить ещё</button>
+        </div>
 
         <div class="catalog-bottom">
           <ol class="catalog-pagination">
@@ -299,19 +296,21 @@
               <a class="catalog-pagination-link button button-main" href="#">4</a>
             </li>
             <li class="catalog-pagination-item">
-              <a class="catalog-pagination-link catalog-pagination-extend button button-main" href="#">
+              <span class="catalog-pagination-link catalog-pagination-extend button button-main">
                 <span class="visually-hidden">К следующим страницам</span>
                 ...
-              </a>
+              </span>
             </li>
             <li class="catalog-pagination-item">
               <a class="catalog-pagination-link button button-main" href="#">10</a>
             </li>
           </ol>
 
-          <select class="catalog-pagination-select" aria-label="Количество гостиниц на странице">
-            <option value="4">4</option>
-          </select>
+          <div class="select-container select-container-pagination">
+            <select class="catalog-pagination-select" aria-label="Количество гостиниц на странице">
+              <option value="4">4</option>
+            </select>
+          </div>
         </div>
       </section>
     </main>
