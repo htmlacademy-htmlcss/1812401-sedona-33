@@ -1646,6 +1646,26 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border: none;
   background-color: var(--ligth-bg);
   border-radius: 50%;
+  outline: none;
+}
+
+.modal-close-button:hover {
+  background-color: var(--border-color);
+}
+
+.modal-close-button:focus {
+  background-color: var(--border-color);
+  box-shadow: 0 0 0 3px var(--primary);
+}
+
+.modal-close-button:focus:not(:focus-visible) {
+  background-color: var(--ligth-bg);
+  box-shadow: none;
+}
+
+.modal-close-button:focus-visible {
+  background-color: var(--border-color);
+  outline: 3px solid var(--primary);
 }
 
 .modal-close-button:active .close-button-image {
@@ -1657,7 +1677,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   grid-template-columns: 146px repeat(3, 1fr);
   gap: 40px 10px;
   grid-column: 1 / -1;
-
 }
 
 .modal-form-label {
