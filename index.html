@@ -201,14 +201,14 @@
             <!-- При неверном вводе даты добавляется псевдоэлемент .modal-form-notacceptable::before -->
             <!-- При верном вводе даты добавляется псевдоэлемент .modal-form-acceptable::before -->
             <div class="modal-input-large modal-form-notacceptable">
-              <input class="field-input modal-form-input" type="date" id="in-date" name="in-date" placeholder="Укажите дату" value="27 апреля 2020">
+              <input class="field-input modal-form-input" type="date" id="in-date" name="in-date" min="2010-10-10" max="2011-11-29" required>
             </div>
 
             <label class="modal-form-label" for="out-date">
               Дата выезда:
             </label>
             <div class="modal-input-large modal-form-acceptable">
-              <input class="field-input modal-form-input" type="date" id="out-date" name="out-date" placeholder="Укажите дату" value="1 сентября 2021">
+              <input class="field-input modal-form-input" type="date" id="out-date" name="out-date" min="2010-10-11" max="2011-11-30" required>
             </div>
 
             <label class="modal-form-label" for="adults">
@@ -220,7 +220,7 @@
                   <path d="M0 0v1h13V0H0Z"/>
                 </svg>
               </button>
-              <input class="field-input modal-form-input modal-form-number" type="number" id="adults" name="adults" min="0" max="1000" value="2">
+              <input class="field-input modal-form-input modal-form-number" type="number" id="adults" name="adults" min="0" max="1000" value="2" required>
               <button class="modal-number-button modal-plus-button" type="button">
                 <svg class="number-button-image" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" fill-opacity="0.3" xmlns="http://www.w3.org/2000/svg">
                   <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
@@ -232,14 +232,14 @@
               <label class="modal-form-label form-label-kids" for="kids">
                 Дети:
               </label>
-              <!-- При нажатии на .modal-information-button добавляется класс .information-active,
+              <!-- При нажатии на .modal-information-button добавляется класс .modal-information-active,
               с .form-information-container снимается .display-none -->
-              <span class="modal-information-button">
+              <button class="modal-information-button modal-information-active" type="button">
                 <span class="visually-hidden">Дополнительная информация</span>
-                <div class="form-information-container display-none">
-                  <p class="form-information-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+                <div class="modal-information-container">
+                  <p class="modal-information-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
                 </div>
-              </span>
+              </button>
             </div>
             <div class="modal-input-small">
               <div class="modal-input-small">
