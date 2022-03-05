@@ -1123,6 +1123,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  outline: none;
 }
 
 .price-range-toggle:hover {
@@ -1132,7 +1133,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .price-range-toggle:focus {
   box-shadow: 0 0 0 3px var(--primary),
               0 4px 10px rgba(0, 0, 0, 0.25);
-  outline: none;
 }
 
 .price-range-toggle:focus:not(:focus-visible) {
@@ -1140,8 +1140,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .price-range-toggle:focus-visible {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  outline: 3px solid var(--primary);
+  box-shadow: 0 0 0 3px var(--primary),
+              0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .price-range-scale .price-range-toggle:active {
