@@ -1123,6 +1123,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  outline: none;
 }
 
 .price-range-toggle:hover {
@@ -1132,7 +1133,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .price-range-toggle:focus {
   box-shadow: 0 0 0 3px var(--primary),
               0 4px 10px rgba(0, 0, 0, 0.25);
-  outline: none;
 }
 
 .price-range-toggle:focus:not(:focus-visible) {
@@ -1140,11 +1140,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .price-range-toggle:focus-visible {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  outline: 3px solid var(--primary);
+  box-shadow: 0 0 0 3px var(--primary),
+              0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.price-range-toggle:active {
+.price-range-scale .price-range-toggle:active {
   box-shadow: 0 0 0 2px var(--primary),
               0 7px 15px rgba(0, 0, 0, 0.4);
 }
@@ -1357,7 +1357,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   outline: none;
 }
 
-.catalog-displaytype-link:active {
+.catalog-displaytype-item .catalog-displaytype-link:active {
   border: 2px solid #000000;
 }
 
@@ -1551,6 +1551,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-color: var(--ligth-bg);
 }
 
+.catalog-pagination-extend {
+  pointer-events: none;
+}
+
 .catalog-pagination-select {
   width: 160px;
   height: 48px;
@@ -1597,6 +1601,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   top: 0;
   left: 0;
   display: flex;
+  z-index: 1;
   width: 100%;
   height: 100%;
   text-align: left;
@@ -1679,6 +1684,20 @@ input[type=date]::-webkit-calendar-picker-indicator {
   grid-column: 1 / -1;
 }
 
+.modal-field-container {
+  display: grid;
+  grid-template-columns: 146px 1fr;
+  column-gap: 10px;
+}
+
+.modal-field-container.container-large {
+  grid-column: 1 / -1;
+}
+
+.modal-field-container.container-small {
+  grid-column: 2 span;
+}
+
 .modal-form-label {
   font-weight: 700;
   color: var(--black);
@@ -1712,23 +1731,22 @@ input[type=date]::-webkit-calendar-picker-indicator {
   outline: none;
 }
 
-.modal-form-notacceptable::before {
-  content: "Мы не можем отправить вас в прошлое.";
-  position: absolute;
-  left: 0;
-  top: 40px;
-  font-size: 16px;
-  line-height: 40px;
-  color: #FF5757;
-}
-
-.modal-form-acceptable::before {
-  content: "На эти даты есть свободные номера. Пока есть.";
+.date-text {
+  display: none;
   position: absolute;
   left: 0;
   bottom: -34px;
   font-size: 16px;
   line-height: 40px;
+}
+
+.modal-input-error ~ .date-text-error {
+  display: block;
+  color: #FF5757;
+}
+
+.modal-input-success ~ .date-text-success {
+  display: block;
 }
 
 .modal-form-number {
@@ -1820,13 +1838,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-position: center;
   background-size: 1px 9px;
   border-radius: 50%;
-}
-
-.modal-information-active {
-  background-color: var(--primary-dark);
+  outline: none;
 }
 
 .modal-information-container {
+  display: none;
   position: absolute;
   box-sizing: border-box;
   left: -116px;
@@ -1836,6 +1852,38 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-color: #333333;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+}
+
+.modal-information-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.modal-information-button:hover .modal-information-container {
+  display: block;
+}
+
+.modal-information-button:focus {
+  background-color: var(--primary-dark);
+}
+
+.modal-information-button:focus .modal-information-container {
+  display: block;
+}
+
+.modal-information-button:focus:not(:focus-visible) {
+  background-color: var(--primary);
+}
+
+.modal-information-button:focus:not(:focus-visible) .modal-information-container {
+  display: none;
+}
+
+.modal-information-button:focus-visible {
+  background-color: var(--primary-dark);
+}
+
+.modal-information-button:focus-visible .modal-information-container {
+  display: block;
 }
 
 .modal-information-container::before {
