@@ -213,7 +213,7 @@ html {
 }
 
 input[type=date]::-webkit-calendar-picker-indicator {
-  display: none;
+  opacity: 0;
 }
 
 /* Главная страница */
@@ -943,31 +943,30 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.checkbox-mark:focus {
+.checkbox-input:focus + .checkbox-mark {
   background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0 0 0 3px var(--primary);
 }
 
-.checkbox-mark:focus:not(:focus-visible) {
+.checkbox-input:focus:not(:focus-visible) + .checkbox-mark {
   background-color: var(--white);
   box-shadow: none;
 }
 
-.checkbox-mark:focus-visible {
+.checkbox-input:focus-visible + .checkbox-mark {
   background-color: rgba(255, 255, 255, 0.6);
   outline: 3px solid var(--primary);
 }
 
-.checkbox-input:active {
+.checkbox-input:active + .checkbox-mark {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.checkbox-input:disabled {
+.checkbox-input:disabled + .checkbox-mark {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.checkbox-input:checked + .filters-control-mark::before,
-.checkbox-input:checked + .filters-control-mark::after {
+.checkbox-input:checked + .filters-control-mark::before {
   content: "";
   position: absolute;
   top: 5px;
@@ -988,36 +987,36 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-color: var(--white);
 }
 
-.radio-mark:focus {
+.radio-button-input:focus .radio-mark {
   box-shadow: inset 0 0 0 3px var(--primary);
 }
 
-.radio-mark:focus:not(:focus-visible) {
+.radio-button-input:focus:not(:focus-visible) .radio-mark {
   box-shadow: none;
 }
 
-.radio-mark:focus-visible {
+.radio-button-input:focus-visible .radio-mark {
   box-shadow: inset 0 0 0 3px var(--primary);
 }
 
-.radio-button-input:checked + .radio-mark:focus {
+.radio-button-input:checked:focus + .radio-mark {
   box-shadow: 0 0 0 3px var(--primary);
 }
 
-.radio-button-input:checked + .radio-mark:focus:not(:focus-visible) {
+.radio-button-input:checked:focus:not(:focus-visible) + .radio-mark {
   box-shadow: none;
 }
 
-.radio-button-input:checked + .radio-mark:focus-visible {
+.radio-button-input:checked:focus-visible + .radio-mark {
   box-shadow: none;
   outline: 3px solid var(--primary);
 }
 
-.radio-button-input:active {
+.radio-button-input:active + .radio-mark {
   background-color: var(--white);
 }
 
-.radio-button-input:disabled {
+.radio-button-input:disabled + .radio-mark {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1124,6 +1123,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  outline: none;
 }
 
 .price-range-toggle:hover {
@@ -1133,7 +1133,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .price-range-toggle:focus {
   box-shadow: 0 0 0 3px var(--primary),
               0 4px 10px rgba(0, 0, 0, 0.25);
-  outline: none;
 }
 
 .price-range-toggle:focus:not(:focus-visible) {
@@ -1141,11 +1140,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .price-range-toggle:focus-visible {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  outline: 3px solid var(--primary);
+  box-shadow: 0 0 0 3px var(--primary),
+              0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.price-range-toggle:active {
+.price-range-scale .price-range-toggle:active {
   box-shadow: 0 0 0 2px var(--primary),
               0 7px 15px rgba(0, 0, 0, 0.4);
 }
@@ -1358,7 +1357,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   outline: none;
 }
 
-.catalog-displaytype-link:active {
+.catalog-displaytype-item .catalog-displaytype-link:active {
   border: 2px solid #000000;
 }
 
@@ -1552,6 +1551,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-color: var(--ligth-bg);
 }
 
+.catalog-pagination-extend {
+  pointer-events: none;
+}
+
 .catalog-pagination-select {
   width: 160px;
   height: 48px;
@@ -1598,6 +1601,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   top: 0;
   left: 0;
   display: flex;
+  z-index: 1;
   width: 100%;
   height: 100%;
   text-align: left;
@@ -1647,6 +1651,26 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border: none;
   background-color: var(--ligth-bg);
   border-radius: 50%;
+  outline: none;
+}
+
+.modal-close-button:hover {
+  background-color: var(--border-color);
+}
+
+.modal-close-button:focus {
+  background-color: var(--border-color);
+  box-shadow: 0 0 0 3px var(--primary);
+}
+
+.modal-close-button:focus:not(:focus-visible) {
+  background-color: var(--ligth-bg);
+  box-shadow: none;
+}
+
+.modal-close-button:focus-visible {
+  background-color: var(--border-color);
+  outline: 3px solid var(--primary);
 }
 
 .modal-close-button:active .close-button-image {
@@ -1658,7 +1682,20 @@ input[type=date]::-webkit-calendar-picker-indicator {
   grid-template-columns: 146px repeat(3, 1fr);
   gap: 40px 10px;
   grid-column: 1 / -1;
+}
 
+.modal-field-container {
+  display: grid;
+  grid-template-columns: 146px 1fr;
+  column-gap: 10px;
+}
+
+.modal-field-container.container-large {
+  grid-column: 1 / -1;
+}
+
+.modal-field-container.container-small {
+  grid-column: 2 span;
 }
 
 .modal-form-label {
@@ -1694,23 +1731,22 @@ input[type=date]::-webkit-calendar-picker-indicator {
   outline: none;
 }
 
-.modal-form-notacceptable::before {
-  content: "Мы не можем отправить вас в прошлое.";
-  position: absolute;
-  left: 0;
-  top: 40px;
-  font-size: 16px;
-  line-height: 40px;
-  color: #FF5757;
-}
-
-.modal-form-acceptable::before {
-  content: "На эти даты есть свободные номера. Пока есть.";
+.date-text {
+  display: none;
   position: absolute;
   left: 0;
   bottom: -34px;
   font-size: 16px;
   line-height: 40px;
+}
+
+.modal-input-error ~ .date-text-error {
+  display: block;
+  color: #FF5757;
+}
+
+.modal-input-success ~ .date-text-success {
+  display: block;
 }
 
 .modal-form-number {
@@ -1729,6 +1765,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .form-label-kids {
   margin-left: auto;
   margin-right: 8px;
+  max-width: 80px;
+  overflow: clip;
 }
 
 .modal-number-button {
@@ -1800,15 +1838,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-position: center;
   background-size: 1px 9px;
   border-radius: 50%;
+  outline: none;
 }
 
-.information-active {/* При нажатии на .modal-information-button. */
-  background-color: var(--primary-dark);
-}
-
-.form-information-container {
+.modal-information-container {
+  display: none;
   position: absolute;
-  position: relative;
   box-sizing: border-box;
   left: -116px;
   top: 40px;
@@ -1819,21 +1854,54 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 10px;
 }
 
-.form-information-container::before {
+.modal-information-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.modal-information-button:hover .modal-information-container {
+  display: block;
+}
+
+.modal-information-button:focus {
+  background-color: var(--primary-dark);
+}
+
+.modal-information-button:focus .modal-information-container {
+  display: block;
+}
+
+.modal-information-button:focus:not(:focus-visible) {
+  background-color: var(--primary);
+}
+
+.modal-information-button:focus:not(:focus-visible) .modal-information-container {
+  display: none;
+}
+
+.modal-information-button:focus-visible {
+  background-color: var(--primary-dark);
+}
+
+.modal-information-button:focus-visible .modal-information-container {
+  display: block;
+}
+
+.modal-information-container::before {
   content: "";
   position: absolute;
   left: 50%;
   top: -19px;
-  margin-left: -10px;
+  margin-left: -9px;
   border: 10px solid transparent;
   border-bottom: 10px solid #333333;
 }
 
-.form-information-text {
+.modal-information-text {
   padding: 0;
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 20px;
+  text-align: left;
   color: var(--white);
 }
 
