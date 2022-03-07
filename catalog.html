@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Каталог отелей в Седоне</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
   </head>
   <body class="page-body page-container">
     <header class="page-header">
@@ -59,7 +61,7 @@
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="index.html">
                 <span class="visually-hidden">На главную</span>
-                <svg class="breadcrumbs-icon" aria-hidden="true" focusable="false"width="12" height="12" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <svg class="breadcrumbs-icon" aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 12 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6 .3 0 5.8V12h12V5.8L6 .3ZM11 11H1V6.2l5-4.5 5 4.5V11Z"/><path d="M4 10h1V7.5h2V10h1V6.5H4V10Z"/>
                 </svg>
               </a>
@@ -263,7 +265,7 @@
               </a>
             </h3>
             <p class="catalog-card-text">Гостиница</p>
-            <p class="catalog-card-text">От 3 000 ₽</p>
+            <p class="catalog-card-text">От 3000 ₽</p>
             <a class="catalog-card-link button button-special button-small" href="#">Подробнее</a>
             <a class="catalog-card-link button button-main button-small" href="#">В избранное</a>
             <div class="catalog-card-container">
@@ -306,6 +308,9 @@
           </ol>
 
           <div class="select-container select-container-pagination">
+            <span class="catalog-select-text">
+              Гостиниц на странице:
+            </span>
             <select class="catalog-pagination-select" aria-label="Количество гостиниц на странице">
               <option value="4">4</option>
             </select>
@@ -315,7 +320,7 @@
     </main>
 
     <footer class="page-footer">
-      <section class="subscribe">
+      <section class="subscribe catalog-subscribe">
         <div class="section-topper">
           <h2 class="section-topper-title">Подпишитесь на рассылку</h2>
           <p class="section-topper-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>

@@ -71,9 +71,8 @@ html {
 .button {
   display: inline-block;
   vertical-align: middle;
+  box-sizing: border-box;
   padding: 14px 20px;
-  border: none;
-  border-radius: 4px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -82,9 +81,11 @@ html {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
   outline: none;
-  user-select: none;
-  box-sizing: border-box;
+  -webkit-user-select: none;
+          user-select: none;
   transition-property: background-color, color;
   transition-duration: 0.2s;
 }
@@ -159,14 +160,14 @@ html {
 }
 
 .field-input {
+  box-sizing: border-box;
   padding: 10px 19px;
   font-family: inherit;
   font-size: 18px;
   line-height: 26px;
   border: none;
-  outline: none;
   background-color: var(--ligth-bg);
-  box-sizing: border-box;
+  outline: none;
 }
 
 .field-input:hover {
@@ -221,7 +222,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 /* Панель навигации */
 .page-header {
   position: relative;
-  padding: 0 70px 0 250px;
+  padding: 0 70px 0 240px;
 }
 
 .navigation {
@@ -285,6 +286,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 20px 17px;
 }
 
+.navigation-link-current {
+  pointer-events: none;
+}
+
 .navigation-link-current::before {
   content: "";
   position: absolute;
@@ -306,9 +311,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .navigation-user .navigation-link {
   position: relative;
-  box-sizing: border-box;
   display: flex;
   align-items: baseline;
+  box-sizing: border-box;
   padding: 10px 5px 10px 10px;
 }
 
@@ -318,14 +323,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .navigation-icon-quantity {
   position: absolute;
+  top: 0;
+  left: 22px;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 20px;
   height: 20px;
-  top: 0;
-  left: 22px;
-  z-index: 1;
   font-size: 10px;
   line-height: 13px;
   font-weight: 400;
@@ -352,6 +357,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .welcome {
   position: relative;
+  box-sizing: border-box;
   min-height: 485px;
   padding-top: 51px;
   padding-bottom: 82px;
@@ -360,7 +366,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  box-sizing: border-box;
 }
 
 .welcome::before {
@@ -388,7 +393,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .section-topper-title {
-  margin: 0 0 31px;
+  margin: 0 0 29px;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
@@ -411,6 +416,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
 /*  Причины */
 .reasons {
   padding-top: 63px;
+}
+
+.reasons .section-topper-title {
+  margin-bottom: 31px;
+}
+
+.reasons .section-topper-text {
+  line-height: 36px;
 }
 
 .reasons-list {
@@ -437,10 +450,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .reasons-item-text-container {
+  box-sizing: border-box;
   width: 33.33%;
   min-height: 384px;
   padding: 97px 75px 80px;
-  box-sizing: border-box;
 }
 
 .reasons-item-picture-container {
@@ -461,10 +474,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .reasons-item-submain {
+  box-sizing: border-box;
   width: 33.33%;
   min-height: 384px;
   padding: 97px 75px 80px;
-  box-sizing: border-box;
 }
 
 .reasons-item-submain:nth-of-type(2n+1) {
@@ -477,9 +490,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .reasons-item-title {
   position: relative;
-  padding-bottom: 40px;
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 28px;
+  padding-bottom: 50px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -489,6 +502,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .reasons-item-text {
   margin: 0;
+  padding-bottom: 10px;
   font-size: 18px;
   line-height: 21px;
   color: var(--font-color);
@@ -531,7 +545,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .advantages-item::before {
   content: "";
   position: absolute;
-  bottom: 223px;
+  top: 85px;
   left: 50%;
   z-index: 1;
   margin-left: -37px;
@@ -567,19 +581,35 @@ input[type=date]::-webkit-calendar-picker-indicator {
   text-transform: uppercase;
 }
 
+.advantages-text {
+  font-size: 18px;
+  line-height: 21px;
+}
+
 /* Поиск отеля */
 .offer {
-  padding: 92px 0;
+  padding: 90px 0 94px 0;
 }
 
 .offer-button {
   width: 575px;
-  margin-top: 56px;
+  margin-top: 54px;
+  padding: 14px 30px 10px 30px;
+  line-height: 36px;
 }
 
 /* Подписка */
 .subscribe {
   padding: 70px 70px 140px;
+}
+
+.subscribe-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribe-field .field-input {
+  flex-grow: 1;
 }
 
 .subscribe-with-bg {
@@ -617,7 +647,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .page-footer-bottom {
   display: flex;
   align-items: center;
-  padding: 40px 72px;
+  padding: 40px 62px;
 }
 
 .social-list {
@@ -630,12 +660,21 @@ input[type=date]::-webkit-calendar-picker-indicator {
   list-style-type: none;
 }
 
+.social-item:not(:last-child) {
+  margin-right: 4px;
+}
+
 .social-link {
   position: relative;
   display: block;
   min-width: 40px;
   min-height: 40px;
-  user-select: none;
+  -webkit-user-select: none;
+          user-select: none;
+}
+
+.social-link svg {
+  margin-top: 8px;
 }
 
 .social-link:not(:last-child) {
@@ -689,12 +728,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .page-footer-address {
-  width: 720px;
+  width: 700px;
   margin-right: auto;
 }
 
 .page-footer-address a {
-  padding: 10px;
   font-style: normal;
   font-size: 40px;
   line-height: 40px;
@@ -722,8 +760,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .page-footer-address a:focus-visible {
   color: var(--secondary);
-  outline: 3px solid var(--primary);
   border-radius: 5px;
+  outline: 3px solid var(--primary);
 }
 
 .page-footer-address a:active {
@@ -735,7 +773,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
   position: relative;
   min-width: 115px;
   min-height: 34px;
-  padding: 10px;
+  margin-top: -5px;
+  margin-right: 10px;
 }
 
 .htmlacademy-link:hover .htmlacademy-image {
@@ -783,9 +822,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 /* Хедер каталога */
 .catalog-top-container {
+  box-sizing: border-box;
   min-height: 408px;
   padding: 35px 72px 45px 71px;
-  box-sizing: border-box;
   color: var(--white);
   background-color: var(--secondary);
   background-image: url("../images/catalog-background.jpg");
@@ -806,13 +845,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 43px;
   list-style-type: none;
 }
 
 .breadcrumbs-item {
   position: relative;
-  margin-top: -5px;
+  margin-top: -10px;
 }
 
 .breadcrumbs-item:not(:last-child) {
@@ -820,7 +859,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .breadcrumbs-link {
-  padding: 5px;
+  padding: 5px 6px;
   color: var(--white);
   font-size: 16px;
   line-height: 21px;
@@ -828,7 +867,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .breadcrumbs-link:first-child {
-  padding: 5px 8px;
   margin-left: -5px;
 }
 
@@ -844,6 +882,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-repeat: no-repeat;
   background-size: 5px 8px;
   opacity: 0.3;
+}
+
+.breadcrumbs-item:last-child {
+  pointer-events: none;
 }
 
 .breadcrumbs-link:hover {
@@ -892,6 +934,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .filters-group-radio {
   margin-right: auto;
+  padding-right: 20px;
 }
 
 .filters-group-prices {
@@ -905,6 +948,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+}
+
+.filters-group-prices .filters-group-legend {
+  padding-bottom: 35px;
 }
 
 .filters-group ul {
@@ -922,7 +969,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .control-button-item:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 13px;
 }
 
 .filters-control-mark {
@@ -1043,13 +1090,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
   -moz-appearance: textfield;
   width: 145px;
   height: 48px;
-  background: transparent;
-  padding-left: 19px;
+  padding-left: 16px;
   padding-right: 40px;
   line-height: 23px;
   color: var(--white);
+  background: transparent;
   border: 2px solid var(--white);
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .price-input:hover {
@@ -1073,8 +1121,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .price-input:focus-visible {
   box-shadow: inset 0 0 0 3px #81B3D2;
-  outline: 3px solid #81B3D2;
   background: transparent;
+  outline: 3px solid #81B3D2;
 }
 
 .price-input-container {
@@ -1098,6 +1146,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .price-input-max {
+  width: 144px;
   border-radius: 0 4px 4px 0;
 }
 
@@ -1160,7 +1209,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .filters-buttons {
-  padding-top: 55px;
+  padding-top: 60px;
 }
 
 .submit-button {
@@ -1184,12 +1233,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
   width: min-content;
   align-self: center;
   padding: 0 10px;
-  background: transparent;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
   text-transform: none;
+  background: transparent;
 }
 
 .reset-button:hover {
@@ -1221,14 +1270,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .catalog-result {
   display: flex;
-  margin-bottom: 53px;
-  flex-wrap: wrap;
+  margin-bottom: 44px;
   align-items: center;
 }
 
 .catalog-result-text {
-  margin: 0;
-  margin-right: auto;
+  max-width: 400px;
+  margin: 4px auto auto 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
@@ -1240,14 +1288,15 @@ input[type=date]::-webkit-calendar-picker-indicator {
   width: 287px;
   height: 48px;
   margin-top: -8px;
-  padding: 10px 15px;
+  padding: 9px 15px 15px 18px;
   font-family: inherit;
   font-size: 18px;
   line-height: 23px;
+  color: #333333;
   border: 2px solid var(--border-color);
   border-radius: 4px;
-  color: #333333;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .select-container {
@@ -1255,7 +1304,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .select-container-hotel {
-  margin-right: 81px;
+  margin-right: 80px;
 }
 
 .select-container::before {
@@ -1265,11 +1314,16 @@ input[type=date]::-webkit-calendar-picker-indicator {
   right: 20px;
   width: 12px;
   height: 7px;
-  margin-top: -5px;
+  margin-top: -7px;
   background-image: url("../images/icons/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 12px 7px;
+}
+
+.catalog-result-select {
+  padding-right: 40px;
+  overflow: hidden;
 }
 
 .catalog-result-select:hover {
@@ -1311,7 +1365,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: block;
   width: 17px;
   height: 16px;
-  padding: 17px 16px;
+  padding: 14px;
   border: 2px solid var(--border-color);
   border-radius: 4px;
   background-position: center;
@@ -1362,14 +1416,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .catalog-displaytype-item:not(:last-child) {
-  margin-right: 8px;
+  margin-right: 7px;
 }
 
 /* Карточки гостиниц */
 .catalog-card-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px 18px;
+  gap: 9px 18px;
   margin: 0;
   margin-bottom: 34px;
   padding: 0;
@@ -1380,8 +1434,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 206px auto repeat(3, min-content);
-  gap: 16px 26px;
+  gap: 16px 20px;
   padding: 20px;
+}
+
+.catalog-card-link.button-special {
+  max-width: 133px;
 }
 
 .catalog-card-link:not(.button) {
@@ -1498,20 +1556,21 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   min-width: 160px;
+  max-width: 180px;
   padding: 9px 20px;
   font-size: 16px;
   line-height: 20px;
+  text-transform: uppercase;
   background-color: var(--ligth-bg);
   border-radius: 4px;
-  text-transform: uppercase;
-  box-sizing: border-box;
 }
 
 .catalog-button-container {
   display: flex;
   justify-content: center;
-  padding-top: 29px;
+  padding-top: 26px;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
@@ -1524,12 +1583,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
 /* Пагинация */
 .catalog-bottom {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding-top: 30px;
 }
 
 .catalog-pagination {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -1537,13 +1598,23 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .catalog-pagination-link {
   display: flex;
-  width: 55px;
+  min-width: 55px;
   height: 55px;
   margin-right: 8px;
+  margin-bottom: 5px;
+  padding: 0;
   justify-content: center;
   align-items: center;
   font-size: 20px;
   line-height: 26px;
+}
+
+.catalog-pagination-current {
+  pointer-events: none;
+}
+
+.select-container.select-container-pagination::before {
+  margin-top: -3px;
 }
 
 .catalog-pagination-item:first-child .catalog-pagination-link {
@@ -1555,17 +1626,27 @@ input[type=date]::-webkit-calendar-picker-indicator {
   pointer-events: none;
 }
 
+.catalog-select-text {
+  margin-top: -2px;
+  margin-right: 45px;
+  font-size: 18px;
+  line-height: 23px;
+}
+
 .catalog-pagination-select {
   width: 160px;
   height: 48px;
-  padding: 10px 15px;
+  margin-top: -4px;
+  padding: 10px 40px 10px 15px;
   font-family: inherit;
   font-size: 18px;
   border: 2px solid var(--border-color);
   border-radius: 4px;
   line-height: 23px;
   color: #333333;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
+  overflow: hidden;
 }
 
 .catalog-pagination-select:hover {
@@ -1590,8 +1671,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: rgba(51, 51, 51, 0.3);
 }
 
-.catalog-subscribe {
-  color: #000000;
+.catalog-subscribe .section-topper-title {
+  margin-bottom: 46px;
 }
 
 /* Модальное окно */
@@ -1624,13 +1705,16 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .modal-content {
   display: grid;
-  grid-template-columns: 500px 75px;
+  grid-template-columns: 1fr 75px;
   grid-template-rows: min-content auto;
-  row-gap: 40px;
+  row-gap: 32px;
 }
 
 .modal-title {
+  max-width: 460px;
+  min-height: 67px;
   margin: 0;
+  margin-left: -2px;
   font-size: 30px;
   line-height: 40px;
   color: var(--title-color);
@@ -1639,15 +1723,15 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .modal-close-button {
   display: flex;
-  box-sizing: border-box;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   width: 53px;
   height: 53px;
   grid-column: 2 / -1;
   padding: 0;
   margin-left: auto;
-  margin-bottom: 7px;
+  margin-top: -10px;
   border: none;
   background-color: var(--ligth-bg);
   border-radius: 50%;
@@ -1679,30 +1763,22 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .modal-form {
   display: grid;
-  grid-template-columns: 146px repeat(3, 1fr);
   gap: 40px 10px;
   grid-column: 1 / -1;
 }
 
 .modal-field-container {
   display: grid;
-  grid-template-columns: 146px 1fr;
+  grid-template-columns: 146px repeat(3, 1fr);
   column-gap: 10px;
-}
-
-.modal-field-container.container-large {
-  grid-column: 1 / -1;
-}
-
-.modal-field-container.container-small {
-  grid-column: 2 span;
+  align-items: center;
 }
 
 .modal-form-label {
   font-weight: 700;
   color: var(--black);
+  font-size: 18px;
   line-height: 40px;
-  align-self: center;
 }
 
 .modal-form-input {
@@ -1714,9 +1790,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-weight: 700;
   color: var(--black);
   line-height: 40px;
+}
+
+.modal-form-input[type="date"] {
   background-image: url("../images/icons/modal-calendar.svg");
   background-repeat: no-repeat;
-  background-position: 385px 50%;
+  background-position: right 20px top 50%;
   background-size: 15px 15px;
 }
 
@@ -1764,7 +1843,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .form-label-kids {
   margin-left: auto;
-  margin-right: 8px;
+  margin-right: 11px;
   max-width: 80px;
   overflow: clip;
 }
@@ -1779,8 +1858,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
   margin: 0;
   border: none;
   background: transparent;
-  outline: none;
   border-radius: 4px;
+  outline: none;
 }
 
 .modal-number-button:hover .number-button-image {
@@ -1816,13 +1895,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .modal-minus-button {
-  top: 13px;
-  left: 10px;
+  top: 11px;
+  left: 13px;
 }
 
 .modal-plus-button {
-  top: 13px;
-  right: 10px;
+  top: 11px;
+  right: 15px;
 }
 
 .modal-information-button {
@@ -1844,11 +1923,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .modal-information-container {
   display: none;
   position: absolute;
-  box-sizing: border-box;
   left: -116px;
   top: 40px;
+  box-sizing: border-box;
   width: 256px;
-  padding: 15px 18px 18px 22px;
+  padding: 22px 18px 20px 22px;
   background-color: #333333;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -1906,6 +1985,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .modal-button {
-  height: 60px;
+  max-width: 800px;
   grid-column: 1 / -1;
 }
