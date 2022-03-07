@@ -1924,10 +1924,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: none;
   position: absolute;
   left: -116px;
-  top: 40px;
+  top: 43px;
   box-sizing: border-box;
   width: 256px;
-  padding: 22px 18px 20px 22px;
+  padding: 18px 18px 22px 22px;
   background-color: #333333;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -1970,7 +1970,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   position: absolute;
   left: 50%;
   top: -19px;
-  margin-left: -9px;
+  margin-left: -10px;
   border: 10px solid transparent;
   border-bottom: 10px solid #333333;
 }
@@ -1978,7 +1978,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .modal-information-text {
   padding: 0;
   margin: 0;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 20px;
   text-align: left;
   color: var(--white);
