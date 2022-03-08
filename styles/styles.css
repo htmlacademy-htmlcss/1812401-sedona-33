@@ -247,6 +247,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .navigation-list {
   display: flex;
+  z-index: 1;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -323,7 +324,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .navigation-icon-quantity {
   position: absolute;
-  top: 0;
+  top: 1px;
   left: 22px;
   z-index: 1;
   display: flex;
@@ -647,7 +648,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .page-footer-bottom {
   display: flex;
   align-items: center;
-  padding: 40px 62px;
+  padding: 32px 62px;
 }
 
 .social-list {
@@ -655,6 +656,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   flex-wrap: wrap;
   min-width: 107px;
   margin: 0;
+  margin-top: -10px;
   padding: 0;
   margin-right: 61px;
   list-style-type: none;
@@ -671,10 +673,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   min-height: 40px;
   -webkit-user-select: none;
           user-select: none;
-}
-
-.social-link svg {
-  margin-top: 8px;
 }
 
 .social-link:not(:last-child) {
@@ -729,10 +727,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .page-footer-address {
   width: 700px;
+  margin-top: -3px;
   margin-right: auto;
 }
 
 .page-footer-address a {
+  padding: 10px 15px;
   font-style: normal;
   font-size: 40px;
   line-height: 40px;
@@ -774,7 +774,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
   min-width: 115px;
   min-height: 34px;
   margin-top: -5px;
-  margin-right: 10px;
+  margin-right: -10px;
+  padding: 15px 19px;
 }
 
 .htmlacademy-link:hover .htmlacademy-image {
@@ -859,7 +860,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .breadcrumbs-link {
-  padding: 5px 6px;
+  padding: 0 6px 2px 6px;
   color: var(--white);
   font-size: 16px;
   line-height: 21px;
@@ -1669,6 +1670,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .catalog-pagination-select:active {
   border: 2px solid var(--border-color);
   color: rgba(51, 51, 51, 0.3);
+}
+
+.catalog-subscribe {
+  padding-top: 69px;
 }
 
 .catalog-subscribe .section-topper-title {
