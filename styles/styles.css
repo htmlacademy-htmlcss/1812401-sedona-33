@@ -213,7 +213,7 @@ html {
   -moz-appearance: textfield;
 }
 
-.field-input[type=date]::-webkit-calendar-picker-indicator {
+.field-input[type='date']::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
 
@@ -1705,7 +1705,7 @@ html {
 .modal {
   box-sizing: border-box;
   margin: auto;
-  min-width: 715px;
+  width: 715px;
   padding: 62px 70px 70px 70px;
   background-color: var(--white);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
@@ -1995,7 +1995,6 @@ html {
 }
 
 .modal-button {
-  max-width: 800px;
   grid-column: 1 / -1;
   padding: 10px 30px;
   line-height: 40px;
